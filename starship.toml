@@ -1,0 +1,36 @@
+#Format
+format = " $directory$python[>](bold red)[>](bold green)[>](bold yellow)$package$git_branch $git_status$character"
+
+# Ikke skriv en extra linje på startup
+add_newline = false
+
+# Lager en linje. ikke to
+[line_break]
+disabled = true
+
+# Setter tegn
+[character]
+success_symbol = "[>](bold green)(font=10px)"
+error_symbol = "[>](bold red)(font=10px)"
+
+
+[package]
+disabled = true
+
+#Utseende for dir i terminal
+[directory]
+format = "[$path]($style)$lock_symbol "
+style = "bold green"
+
+### Git ###
+[git_branch]
+format = " [$symbol$branch]($style)"
+
+[git_commit]
+commit_hash_length = 8
+style = "bold red"
+
+### Python i terminal ###
+[python]
+format = "[$symbol$version]($style) "
+style = "bold yellow"
